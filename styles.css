@@ -5,7 +5,26 @@
   margin: 0;
   font-family: 'Quicksand', sans-serif;
 }
+/*rgb(240, 180, 41) yellow left border*/
+.container {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
+}
 
 .sidebar {
-  
+  grid-area: 1/1/3/2;
+  background-color: rgb(25, 146, 212);
+  color: white;
+}
+
+.header {
+  grid-area: 1/2/2/3;
+  color: black;
+}
+
+.main {
+  grid-area: 2/2/3/3;
+  background-color: rgb(226, 232, 240);
+  color: black;
 }

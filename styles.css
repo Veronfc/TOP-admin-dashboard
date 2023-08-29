@@ -11,7 +11,7 @@
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 5fr;
-  grid-template-columns: 275px 1fr;
+  grid-template-columns: 225px 1fr;
 }
 
 .sidebar {
@@ -144,18 +144,19 @@ li i, .sidebar > div i {
 
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 300px;
   gap: 15px;
   padding: 15px;
 }
 
-.projects {
-  grid-area: 1/1/3/2;
-}
-
-.projects-title {
+.projects-title, .announce-title, .trend-title {
   font-size: 1rem;
   font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.projects {
+  grid-area: 1/1/3/2;
 }
 
 .projects .cards {
@@ -166,8 +167,52 @@ li i, .sidebar > div i {
   overflow-y: auto;
 }
 
+.projects .card .body {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical; 
+}
+
+.projects .card .icons {
+  align-self: end;
+  justify-self: end;
+}
+
+.icons i {
+  margin: 0 5px;
+}
+
 .projects .card {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  border-left: 10px solid rgb(240, 180, 41);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.announce .cards, .trend .cards {
+  border-radius: 10px;
+  background-color: white;
+}
+
+.card {
+  padding: 20px;
+}
+
+.card img {
+  width: 40px;
+  border-radius: 40px;
+}
+
+.card .title {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+hr {
+  width: 75%;
+  align-self: center;
 }
 
 .announce {
@@ -175,25 +220,15 @@ li i, .sidebar > div i {
 }
 
 .announce .cards {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr;
-}
-
-.announce .card {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .trend {
-  grid-area: 2/2/3/3;
-  
-}
-
-.trend-title {
-  font-size: 1rem;
-  font-weight: bold;
+  grid-area: 2/2/3/3; 
 }
 
 .trend .cards {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }

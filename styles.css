@@ -25,6 +25,10 @@
   flex-direction: column;
 }
 
+li {
+  cursor: pointer;
+}
+
 li , .sidebar > div {
   list-style: none;
   display: flex;
@@ -136,6 +140,7 @@ li i, .sidebar > div i {
   border-radius: 30px;
   padding: 10px 30px;
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .main {
@@ -191,6 +196,7 @@ li i, .sidebar > div i {
 
 .icons i {
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .projects .card {
@@ -255,4 +261,19 @@ hr {
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
+}
+
+.link {
+  margin: 35px 10px;
+  text-align: center;
+  font-size: 1rem;
+  display: block;
+}
+
+.link a {
+  color: white;
+}
+
+i {
+  cursor: pointer;
 }
